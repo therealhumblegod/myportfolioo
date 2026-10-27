@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carl Angelo E. Sebalosa | Portfolio</title>
+    <meta
+      name="description"
+      content="The portfolio of Carl Angelo E. Sebalosa, featuring creative development and game design projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="#home" class="brand" aria-label="Home">
+          <span class="brand-mark">C</span>
+          <span>Carl Angelo E. Sebalosa</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contacts</a>
+        </div>
+
+        <a class="nav-cta" href="#contact">Hire Me</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero game-hero">
+        <div class="game-intro container">
+          <div>
+            <p class="eyebrow">A PORTFOLIO, REIMAGINED</p>
+            <h1>Hey, I’m Carl Angelo E. Sebalosa.<br /><span>Let’s explore.</span></h1>
+          </div>
+          <p class="game-instructions">
+            Walk the world as my stickman and discover what I make.
+            <span>Move with <kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd> ·
+              Press <kbd>E</kbd> at a sign to enter</span>
+          </p>
+        </div>
+
+        <div class="world-frame" id="world-frame" tabindex="-1" aria-label="Interactive portfolio game">
+          <div class="world" id="world">
+            <div class="world-sky">
+              <span class="world-sun"></span>
+              <span class="cloud cloud-one"></span>
+              <span class="cloud cloud-two"></span>
+              <span class="mountain mountain-one"></span>
+              <span class="mountain mountain-two"></span>
+            </div>
+            <div class="world-ground"></div>
+            <div class="world-route" aria-hidden="true"></div>
+
+            <div class="world-landmark landmark-home">
+              <span class="landmark-icon home-icon" aria-hidden="true">⌂</span>
+              <span class="landmark-label">START HERE</span>
+            </div>
+            <button class="world-landmark landmark-about" type="button" data-target="about" aria-label="Enter About">
+              <span class="landmark-icon" aria-hidden="true">✳</span>
+              <span class="landmark-label">ABOUT</span>
+              <span class="landmark-hint">PRESS E</span>
+            </button>
+            <button class="world-landmark landmark-projects" type="button" data-target="projects" aria-label="Enter Projects">
+              <span class="landmark-icon" aria-hidden="true">▣</span>
+              <span class="landmark-label">PROJECTS</span>
+              <span class="landmark-hint">PRESS E</span>
+            </button>
+            <button class="world-landmark landmark-contact" type="button" data-target="contact" aria-label="Enter Contacts">
+              <span class="landmark-icon" aria-hidden="true">✉</span>
+              <span class="landmark-label">CONTACT</span>
+              <span class="landmark-hint">PRESS E</span>
+            </button>
+
+            <div class="stickman" id="stickman" aria-label="Stickman character">
+              <svg viewBox="0 0 80 140" role="img" aria-label="Stickman">
+                <circle class="stick-head" cx="40" cy="20" r="13"></circle>
+                <path class="stick-body" d="M40 34 L40 83"></path>
+                <g class="stick-arms">
+                  <path d="M40 47 L18 68 M40 47 L62 68"></path>
+                </g>
+                <g class="stick-legs">
+                  <path d="M40 82 L20 119 M40 82 L60 119"></path>
+                </g>
+              </svg>
+              <span class="player-shadow"></span>
+            </div>
+          </div>
+          <aside class="mini-map" aria-label="World map">
+            <span class="mini-map-title">WORLD MAP</span>
+            <div class="mini-map-track" aria-hidden="true">
+              <i class="map-marker map-home"></i>
+              <i class="map-marker map-about"></i>
+              <i class="map-marker map-projects"></i>
+              <i class="map-marker map-contact"></i>
+              <i class="map-player" id="map-player"></i>
+            </div>
+            <span class="mini-map-caption">Explore the world</span>
+          </aside>
+          <div class="game-hud">
+            <span class="hud-dot"></span>
+            <p id="game-status" aria-live="polite">Your adventure starts here</p>
+            <div class="game-controls" aria-label="Touch movement controls">
+              <button type="button" class="move-button" data-move="-1" aria-label="Move left">←</button>
+              <button type="button" class="move-button" data-move="1" aria-label="Move right">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section scene-section about" role="dialog" aria-modal="false" aria-labelledby="about-title" aria-hidden="true">
+        <div class="scene-shell">
+          <a class="back-home" href="#home">← Back to Home</a>
+          <div class="scene-panel about-panel-3d">
+            <div class="container about-grid">
+              <div class="about-copy">
+                <p class="section-tag">ABOUT</p>
+                <h2 id="about-title">Making games and building backend systems.</h2>
+                <p>
+                  I’m passionate about making games and developing the backend systems
+                  that support them. I enjoy bringing ideas to life through engaging
+                  gameplay and dependable server-side features.
+                </p>
+                <p>
+                  From gameplay mechanics to the systems running behind the scenes, I
+                  like solving technical challenges and creating experiences players
+                  can enjoy.
+                </p>
+              </div>
+
+              <div class="about-panel">
+                <div class="info-card">
+                  <span>Specialty</span>
+                  <h3>Gameplay Systems</h3>
+                </div>
+                <div class="info-card accent">
+                  <span>Focus</span>
+                  <h3>Games + Backend</h3>
+                </div>
+                <div class="info-card">
+                  <span>Toolbox</span>
+                  <h3>Lua, C#, JavaScript, Node.js</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section scene-section projects" role="dialog" aria-modal="false" aria-labelledby="projects-title" aria-hidden="true">
+        <div class="scene-shell">
+          <a class="back-home" href="#home">← Back to Home</a>
+          <div class="scene-panel projects-panel-3d">
+            <div class="container">
+              <div class="section-header">
+                <div>
+                  <p class="section-tag">PROJECTS</p>
+                  <h2 id="projects-title">Featured builds</h2>
+                </div>
+              </div>
+
+              <div class="filter-bar" aria-label="Project filters">
+                <button class="filter-btn active" data-filter="all" type="button">All</button>
+                <button class="filter-btn" data-filter="game" type="button">Games</button>
+                <button class="filter-btn" data-filter="web" type="button">Web</button>
+              </div>
+
+              <div class="projects-grid">
+                <article class="project-card" data-category="game">
+                  <div class="project-thumb thumb-one"></div>
+                  <div class="project-body">
+                    <span class="project-tag">Game</span>
+                    <h3>OutBreakX</h3>
+                    <p>
+                      Outbreak X is a Roblox zombie survival game where players fight hordes of undead, collect weapons, and survive in a world overrun by zombies.
+                       Team up with others, upgrade your gear, and fight to stay alive. Can you survive the outbreak?
+                    </p>
+                    <ul>
+                      <li>Roblox Studio</li>
+                      <li>LuaScript</li>
+                      <li>Level Design</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="web">
+                  <div class="project-thumb thumb-five"></div>
+                  <div class="project-body">
+                    <span class="project-tag">Web</span>
+                    <h3>MediaFusion</h3>
+                    <p>
+                      MediaFusion is a movie website where users can discover, explore, and enjoy a wide variety of movies from different genres, including action, comedy, horror, romance, adventure, and science fiction.
+
+                    </p>
+                    <ul>
+                      <li>UI System</li>
+                      <li>Motion</li>
+                      <li>Brand Design</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="game">
+                  <div class="project-thumb thumb-four"></div>
+                  <div class="project-body">
+                    <span class="project-tag">Game</span>
+                    <h3>Filipino Hide And Seek</h3>
+                    <p>
+                      Get ready for a fun game of classic Filipino hide-and-seek! Hide from the seeker, crawl to escape, and try to survive until time runs out. If you're caught, spectate the remaining players and see who wins. 
+                      Can you hide until the end or catch everyone before time runs out? Let the hunt begin!
+                    </p>
+                    <ul>
+                      <li>Systems</li>
+                      <li>Balancing</li>
+                      <li>Creative Direction</li>
+                    </ul>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section scene-section contact" role="dialog" aria-modal="false" aria-labelledby="contact-title" aria-hidden="true">
+        <div class="scene-shell">
+          <a class="back-home" href="#home">← Back to Home</a>
+          <div class="scene-panel contact-panel-3d">
+            <div class="container contact-panel">
+              <div class="contact-copy">
+                <p class="section-tag">CONTACT</p>
+                <h2 id="contact-title">Let’s craft the next level together.</h2>
+                <p>
+                  I’m open to creative collaborations, freelance work, and exciting
+                  game or product opportunities.
+                </p>
+                <div class="contact-list">
+                  <a href="mailto:angelosebalosa@gmail.com">angelosebalosa@gmail.com</a>
+                  <a href="https://www.linkedin.com/in/carl-sebalosa-945333306/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a href="https://github.com/therealhumblegod" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>  
+
+              <form
+                class="contact-form"
+                id="contact-form"
+                action="https://formsubmit.co/ajax/angelosebalosa@gmail.com"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="New portfolio contact message" />
+                <label>
+                  Name
+                  <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+                </label>
+                <label>
+                  Message
+                  <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                </label>
+                <button type="submit" class="primary-btn">Send message</button>
+                <p class="form-status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Carl Angelo E. Sebalosa</p>
+        <p>Built for play.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
